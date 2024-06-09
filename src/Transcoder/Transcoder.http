@@ -1,6 +1,0 @@
-@Transcoder_HostAddress = http://localhost:5216
-
-GET {{Transcoder_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
