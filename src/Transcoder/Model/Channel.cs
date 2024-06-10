@@ -25,7 +25,7 @@ public sealed class Channel(string name, Uri? uri = null) {
     /// <returns>A hash code for the current object.</returns>
     public override int GetHashCode() => name.GetHashCode();
 
-    sealed class TranscodeStream : Stream, IDisposable {
+    sealed class TranscodeStream : Stream {
         readonly Process _process;
 
         public TranscodeStream(Uri uri) {
