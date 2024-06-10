@@ -29,7 +29,7 @@ public sealed class Channel(string name, Uri? uri = null) {
         readonly Process _process;
 
         public TranscodeStream(Uri uri) {
-            _process = new Process() {
+            _process = new Process {
                 StartInfo = new ProcessStartInfo {
                     FileName = "ffmpeg",
                     Arguments = $"-i {uri} -f mpegts -codec:v mpeg1video -codec:a mp2 -", // TODO: find correct settings
